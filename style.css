@@ -441,7 +441,7 @@ body.login-only {
 
 .tab-buttons-section {
       display: grid;
-      grid-template-columns: repeat(2, 1fr);
+      grid-template-columns: repeat(3, 1fr);
       gap: 1rem;
       max-width: 400px;
       margin: 1.5rem auto;
