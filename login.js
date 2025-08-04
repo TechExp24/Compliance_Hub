@@ -22,16 +22,26 @@ const users = [
 
 // ✅ Quotes
 const quotes = [
-  "You're unstoppable today!",
-  "Crushing it as always!",
-  "Your energy is contagious!",
-  "Keep making magic happen!",
-  "You're a star in the kitchen and beyond!",
-  "Today’s your day to shine!",
-  "Greatness looks good on you!",
-  "You're making a real impact today!",
-  "Excellence suits you!",
-  "You’re leading with passion – keep going!"
+"You’re on fire today — don’t burn the place down! 🔥",
+"Look at you go! Total shift slayer 💪",
+"If awesome had a face, it’d be yours today 😎",
+"Crushing it like it’s your full-time job (oh wait… it is!) 😄",
+"You + today = absolute chaos in the best way 💥",
+"You’re the reason today’s going so smooth. No cap! 🧢",
+"This shift doesn’t know what hit it — you showed up!",
+"If we had a scoreboard, you'd be top every round 🎯",
+"Go ahead, steal the spotlight again ✨",
+"You’re serving more than food — you’re serving good vibes too 🍔⚡",
+"You’re moving like you’ve had 3 espressos and a Beyoncé playlist ☕🎶",
+"Speed, style, and smiles – you’re the full package today 📦",
+"Whatever playlist is in your head — keep it playing!",
+"We should put YOU on the specials board 🔥",
+"Your energy’s louder than the ticket printer – and we love it!",
+"That’s not just a shift – that’s a performance 👏",
+"Keep rollin’, rockstar – the day’s not ready for you!",
+"You’re not even halfway done and you’ve already made the day better!",
+"If hustle was a sport, you’d be in the hall of fame 🏆",
+"The sauce isn’t the only thing bringing heat today! 🌶️"
 ];
 
 // ✅ Login handler
