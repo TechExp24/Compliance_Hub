@@ -20,35 +20,57 @@ function showTab(id) {
   document.getElementById('top-tabs').scrollIntoView({ behavior: 'smooth' });
 }
 
-function formatTCode(date) {
-  const dayCode = date.toLocaleDateString('en-GB', { weekday: 'short' })[0].toUpperCase();
-  return `${dayCode}${date.getDate() + date.getMonth() + 1}`;
+// Generate T-code using: day letter + (date + month)
+function getTCode(date) {
+  const dayLetter = date.toLocaleDateString('en-GB', { weekday: 'short' })[0].toUpperCase();
+  const codeNum = date.getDate() + (date.getMonth() + 1); // date + month
+  return `${dayLetter}${codeNum}`;
 }
 
 function formatFullDate(date) {
   return date.toLocaleDateString('en-GB', {
-    weekday: 'long', year: 'numeric', month: 'long', day: '2-digit'
+    weekday: 'long',
+    year: 'numeric',
+    month: 'long',
+    day: '2-digit'
   });
 }
 
 document.addEventListener("DOMContentLoaded", () => {
   if (!sessionStorage.getItem("loggedIn")) {
     window.location.href = "index.html";
-  } else {
-    document.body.style.display = "block";
-
-    const today = new Date();
-    const cooked = new Date(today); cooked.setDate(today.getDate() - 2);
-    const disposal = new Date(today); disposal.setDate(today.getDate() + 2);
-
-    document.getElementById("cook-code").textContent = formatTCode(cooked);
-    document.getElementById("cook-date").textContent = formatFullDate(cooked);
-    document.getElementById("dispose-code").textContent = formatTCode(disposal);
-    document.getElementById("dispose-date").textContent = formatFullDate(disposal);
-    document.getElementById("reminder-code").textContent = formatTCode(today) + formatTCode(cooked);
+    return;
   }
+
+  document.body.style.display = "block";
+
+  const today = new Date();
+
+  // Cooked = today
+  const cooked = new Date(today);
+
+  // Disposal = today + 2 days
+  const disposal = new Date(today);
+  disposal.setDate(today.getDate() + 2);
+
+  // Expired threshold = today - 2 days
+  const expired = new Date(today);
+  expired.setDate(today.getDate() - 2);
+
+  // Set T-codes and full dates
+  document.getElementById("cook-code").textContent = getTCode(cooked);
+  document.getElementById("cook-date").textContent = formatFullDate(cooked);
+
+  document.getElementById("dispose-code").textContent = getTCode(disposal);
+  document.getElementById("dispose-date").textContent = formatFullDate(disposal);
+
+  // Reminder code: Today + 3-days-ago code
+  const reminderCode = getTCode(expired) + getTCode(today);
+  const reminder = document.getElementById("reminder-code");
+  if (reminder) reminder.textContent = reminderCode;
 });
 
+// logout logic
 document.getElementById("logout-btn").addEventListener("click", () => {
   sessionStorage.removeItem("loggedIn");
   window.location.href = "index.html";
