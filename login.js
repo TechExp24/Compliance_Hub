@@ -11,6 +11,8 @@ const users = [
   { email: "oliviarr08@gmail.com", password: "2008", name: "Olivia", business: ["stclaire-valentine"] },
   { email: "stclements@phillys.com", password: "1234", name: "St Clements", business: ["phillys-stclements"] },
   { email: "rick@diner.com", password: "1234", name: "Rick", business: ["ricks-diner"] },
+  { email: "hanimensur63@gmail.com", password: "2004", name: "Hani", business: ["ricks-diner"] },
+  { email: "sumeshkp@gmail.com", password: "1987", name: "Sumesh", business: ["ricks-diner"] },
   { email: "dejejus14@yahoo.com", password: "1990", name: "Abito", business: ["ricks-diner"] },
   { email: "Constantio", password: "1992", name: "Soares", business: ["ricks-diner"] },
   { email: "toprakcideniz@gmail.com", password: "1995", name: "Deniz", business: ["ricks-diner"] },
