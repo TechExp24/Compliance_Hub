@@ -22,7 +22,7 @@ const users = [
   { email: "sbenbakhti@gmail.com", password: "1234", name: "Sami", business: ["phillys-cowley", "phillys-stclements", "ricks-diner", "stclaire-valentine"] },
   { email: "mourad2001@yahoo.com", password: "1972", name: "Mourad", business: ["phillys-cowley", "phillys-stclements"] },
   { email: "honorio", password: "1980", name: "Honorio", business: ["phillys-stclements"] },
-  { email: "Sertorio", password: "1999", name: "Rio", business: ["phillys-stclements"] },
+  { email: "sertorio", password: "1999", name: "Rio", business: ["phillys-stclements"] },
 ];
 
 // ✅ Quotes
